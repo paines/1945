@@ -16,11 +16,11 @@ function love.load()
 
     --anim = newAnimation(img, 96, 96, 0.1, 0)	
 	
-
+  local g32 = anim8.newGrid(32,32, 1024,768,   3,3,     1)
     
 	image = love.graphics.newImage('1945.png')
-    local g = anim8.newGrid(32, 32, image:getWidth(), image:getHeight())
-	animation = anim8.newAnimation(g('1-8',1), 0.1)
+   
+	animation = anim8.newAnimation(g32(18,'8-11', 18,'10-7'), 0.2)
 end
 
 function love.update(dt)
